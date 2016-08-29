@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: faisaljarkass
-  Date: 25/08/16
-  Time: 20:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,6 +15,7 @@
 
     <!-- Reference my style sheet, placed under WEB-INF. -->
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
 
 </head>
 
@@ -32,12 +26,14 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-<H1 class="text-center">My First Web App</H1>
+<H1 class="text-center animated infinite shake">My 84th Web App?</H1>
+
+<img class="center-block animated infinite tada" style="display: flex; align-items: center; justify-content: center;border-radius: 400px; border: solid 11px pink; width: 300px;" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/1918733_156001206749_5259181_n.jpg?oh=29b076557543936e1ea7b9061620c5f2&oe=58487E34">
 
 <div class="wrapper">
     <form class="form-signin" method="POST" action="MyServlet">
         <h2 class="form-signin-heading">Please login</h2>
-        <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus=""/>
+        <input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
         <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
         <label class="checkbox">
             <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
