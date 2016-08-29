@@ -10,6 +10,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="AppEngine API" />
         </element>
+        <element id="file-copy" path="$PROJECT_DIR$/users.txt" />
       </element>
     </root>
   </artifact>

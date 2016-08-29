@@ -4,14 +4,27 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    // Logged in page
+
     <servlet>
-        <servlet-name>loginServlet</servlet-name>
+        <servlet-name>loggedinServlet</servlet-name>
         <servlet-class>com.faisal.MyServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
+        <servlet-name>loggedinServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+    // Log in sequence
+    <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <url-pattern>/MyServlet</url-pattern>
+        <servlet-class>com.sequoiia.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/api/login</url-pattern>
     </servlet-mapping>
 
 </web-app>
