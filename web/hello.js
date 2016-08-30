@@ -111,5 +111,44 @@ function sayHelloCallback (response) {
 	alert(response.message);
 }
 
+function login(username, password) {
+    var request = new XMLHttpRequest();
+    var params = "username=" + username + "&password=" + password;
+    var paramsEncoded = encodeURI(params);
+    request.open('POST', 'http://127.0.0.1:8080/api/login', true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+
+            if (data["status"] == false)
+            {
+                console.log("Error, either the username or password is wrong.");
+                var statusMsgDiv = document.getElementById("statusMessage");
+                statusMsgDiv.innerHTML = "<div class=\"alert alert-danger\">" +
+                    "<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>" +
+                    "<strong>Error!</strong> Either the username of password is wrong. Try again." +
+                    "</div>";
+            } else {
+                console.log("Login successful, redirecting to user page.");
+                window.location.href = "/user";
+            }
+        }
+    };
+
+    request.send(paramsEncoded);
+}
 
 
+window.onload=function(){
+    var wrapper = document.getElementById("loginForm");
+    var submitButton = document.getElementById("loginb");
+
+    submitButton.addEventListener("click", function (event) {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        login(username, password);
+    });
+};
