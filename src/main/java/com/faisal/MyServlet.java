@@ -83,9 +83,16 @@ public class MyServlet extends HttpServlet {
 
 
             if (timePlus5Mins > timestamp) {
-                response.addCookie(new Cookie("username", ""));
-                response.addCookie(new Cookie("timestamp", ""));
-                response.addCookie(new Cookie("status", "0"));
+                Cookie userCookie = new Cookie("username", "");
+                userCookie.setPath("/");
+                Cookie timestampCookie = new Cookie("timestamp", "");
+                timestampCookie.setPath("/");
+                Cookie statusCookie = new Cookie("status", "0");
+                statusCookie.setPath("/");
+
+                response.addCookie(userCookie);
+                response.addCookie(timestampCookie);
+                response.addCookie(statusCookie);
 
                 response.getWriter().println("<center><h1>Session expired.</h1></center>");
             } else {

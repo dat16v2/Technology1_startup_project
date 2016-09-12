@@ -15,7 +15,7 @@
 
     <!-- Reference my style sheet, placed under WEB-INF. -->
     <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
+    <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
 
 </head>
 

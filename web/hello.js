@@ -115,7 +115,7 @@ function login(username, password) {
     var request = new XMLHttpRequest();
     var params = "username=" + username + "&password=" + password;
     var paramsEncoded = encodeURI(params);
-    request.open('POST', 'http://127.0.0.1:8080/api/login', true);
+    request.open('POST', '/api/login', true);
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     request.onload = function() {
