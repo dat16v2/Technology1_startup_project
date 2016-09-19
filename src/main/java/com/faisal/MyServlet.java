@@ -1,5 +1,7 @@
 package com.faisal;
 
+import com.sequoiia.blackexercise.models.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +12,6 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import static com.sequoiia.LoginServlet.getUsers;
 
 /**
  * Created by faisaljarkass on 19/08/16.
@@ -54,7 +54,7 @@ public class MyServlet extends HttpServlet {
         logger.log(Level.INFO, "doGet started...");
         response.setContentType("text/html");
 
-        HashMap<String, String> users = getUsers("WEB-INF/users.txt");
+        HashMap<String, User> users = User.getUsers("WEB-INF/users.txt");
         Cookie[] cookies = request.getCookies();
         String username = "";
         Long timestamp = (long) 0;
@@ -96,7 +96,7 @@ public class MyServlet extends HttpServlet {
 
                 response.getWriter().println("<center><h1>Session expired.</h1></center>");
             } else {
-                String password = users.get(username);
+                String password = users.get(username).Password;
 
 
                 PrintWriter out = response.getWriter();

@@ -1,0 +1,13 @@
+{
+	"posts": [{
+		"title": "Lorem ipsum dolor sit amet",
+		"author": "xaxaxa",
+		"timestamp": 123903248347,
+		"text": "Praesent suscipit libero nec vestibulum facilisis. Phasellus ipsum est, ornare et egestas sit amet, faucibus non tellus. Quisque iaculis nisl sed convallis imperdiet. Nunc bibendum lectus eget ipsum dignissim, sit amet tincidunt augue efficitur. Duis pellentesque imperdiet dui nec hendrerit. Nullam efficitur augue tortor, a posuere nisi imperdiet in. In nec scelerisque orci, et sodales massa. Vestibulum volutpat nulla turpis, in scelerisque lectus imperdiet quis. Donec sodales turpis vitae dapibus lacinia."
+	}, {
+		"title": "We're doomed",
+		"author": "randomuser01",
+		"timestamp": 214598345384,
+		"text": "More than 97% of the world's population has been infected with Phuong."
+	}]
+}
