@@ -1,3 +1,4 @@
+"root","password","2"
 "sequoiia","dkopdgk4@;","2"
 "test01","dkopdgk4@;","3"
 "test02","dkopdgk4@;","3"

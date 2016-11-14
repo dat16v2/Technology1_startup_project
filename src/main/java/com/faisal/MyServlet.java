@@ -54,7 +54,7 @@ public class MyServlet extends HttpServlet {
         logger.log(Level.INFO, "doGet started...");
         response.setContentType("text/html");
 
-        HashMap<String, User> users = User.getUsers("WEB-INF/users.txt");
+        HashMap<String, User> users = User.getUsers("WEB-INF/users.txt", request);
         Cookie[] cookies = request.getCookies();
         String username = "";
         Long timestamp = (long) 0;

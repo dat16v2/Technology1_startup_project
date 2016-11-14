@@ -31,7 +31,9 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         response.setHeader("Content-Type", "application/json");
 
-        HashMap<String, User> users = User.getUsers("WEB-INF/users.txt");
+        HashMap<String, User> users = User.getUsers("WEB-INF/users.txt", request);
+        //HashMap<String, User> users = User.getUsersGCS("users.txt");
+
 
 
         if (users.containsKey(username.toLowerCase())) {
